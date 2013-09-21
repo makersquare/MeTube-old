@@ -1,11 +1,7 @@
 class VideosController < ApplicationController
 
 	def show_all
-		@params = params
-	end
-
-	def show
-		@video_name = params[:video_name]
+		
 	end
 
 	def show_gladiator

@@ -45,6 +45,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
+    hirb (0.7.1)
     i18n (0.6.5)
     jbuilder (1.5.1)
       activesupport (>= 3.0.0)
@@ -118,6 +119,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   haml
   haml-rails
+  hirb
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.0)
