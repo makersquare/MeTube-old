@@ -4,12 +4,14 @@ class VideosController < ApplicationController
 		
 	end
 
-	def show_gladiator
-		@video = {:title => "Gladiator 'Not Entertained' Scene", :youtube_id => "FI1ylg4GKv8"}
-	end
-
-	def show_air_force_one
-		@video = {:title => "Harrison Ford's 'Get Off My Plane'", :youtube_id => "sOUoNy7EmPA"}
+	def show
+		videos = {
+			"gladiator" =>
+				{title: "Gladiator 'Are You Not Entertained' Scene", youtube_id: "FI1ylg4GKv8"}, 
+			"newsroom"=>
+				{title: "America is not the best", youtube_id: "q49NOyJ8fNA"}
+		}
+		@video = videos[params[:video_name]]
 	end
 
 end
