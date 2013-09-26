@@ -9,8 +9,11 @@
 
 
 
+puts "clearing data in the videos table"
 
 Video.destroy_all
+
+puts "adding dummy data for videos table"
 
 videos = [
 	{
@@ -38,3 +41,5 @@ videos = [
 videos.each do |video|
 	Video.create(title: video[:title], youtube_id: video[:youtube_id])
 end
+
+puts "added dummy data for videos table"
