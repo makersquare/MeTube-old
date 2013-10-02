@@ -1,4 +1,9 @@
 <ul> List of Awesome Clips
-	<li><%= link_to "Gladiator", "videos/gladiator" %></li>
-	<li><%= link_to "Newsroom", "videos/newsroom" %></li>
+  <% @videos.each do |video| %>
+    <li>
+      <%= link_to video.title, video_url(video.id) %>
+      (<%= video.random_rating %>)
+      <%= video.snippet %>
+    </li>
+  <% end %>
 </ul>

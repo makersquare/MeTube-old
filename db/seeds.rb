@@ -38,8 +38,14 @@ videos = [
 	}
 ]
 
+description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptatum, eos saepe laudantium nobis animi facere delectus hic enim doloribus labore distinctio at aliquid iusto possimus. Laudantium, aperiam tenetur laboriosam!'
+
 videos.each do |video|
-	Video.create(title: video[:title], youtube_id: video[:youtube_id])
+	Video.create(
+    title: video[:title], 
+    youtube_id: video[:youtube_id],
+    description: description
+  )
 end
 
 puts "added dummy data for videos table"

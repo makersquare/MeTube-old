@@ -1,5 +1,12 @@
-<h1><%= @video[:title] %></h1>
+<h1><%= @video.title %></h1>
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/<%=@video[:youtube_id]%>" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
 
-<p><%= link_to 'back', videos_url %></p>
+<h4><%= @video.random_rating %> star rating</h4>
+
+<p> <%= @video.description %> </p>
+
+<%= if @video.previous then link_to "< Previous", video_url(@video.previous.id) end %>
+<%= if @video.next then link_to "Next >", video_url(@video.next.id) end %>
+
+<p><%= link_to 'home', videos_url %></p>
